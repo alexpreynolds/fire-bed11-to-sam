@@ -1,0 +1,6 @@
+*.bed
+*.bam
+*.bam.bai
+*.out
+*.err
+*~
