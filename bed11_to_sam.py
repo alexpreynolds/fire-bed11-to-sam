@@ -159,7 +159,7 @@ def blocks_to_cigar(n_blocks, sizes, offsets):
 
 def write_sam_record_for_molecule(identifier, molecule, colors, out_fh):
   QNAME = identifier
-  FLAG = str(0)
+  FLAG = str(0) if molecule['strand'] == '+' else str(16)
   RNAME = molecule['chrom']
   POS = str(molecule['start'] + 1)
   MAPQ = str(255)
