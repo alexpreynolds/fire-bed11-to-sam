@@ -1,4 +1,5 @@
 *.bed
+*.sam
 *.bam
 *.bam.bai
 *.out

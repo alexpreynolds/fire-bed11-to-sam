@@ -163,9 +163,9 @@ def write_sam_record_for_molecule(identifier, molecule, colors, out_fh):
   RNAME = molecule['chrom']
   POS = str(molecule['start'] + 1)
   MAPQ = str(255)
-  CIGAR = ''.join(blocks_to_cigar(molecule['blocks']['count'],
-                                  molecule['blocks']['sizes'],
-                                  molecule['blocks']['offsets'],))
+  CIGAR = ''.join([str(x) for x in blocks_to_cigar(molecule['blocks']['count'],
+                                                   molecule['blocks']['sizes'],
+                                                   molecule['blocks']['offsets'],)])
   RNEXT = '*'
   PNEXT = str(0)
   TLEN = str(molecule['end'] - molecule['start'])
